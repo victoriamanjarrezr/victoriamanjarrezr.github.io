@@ -3,82 +3,207 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Victoria Manjarrez - Home</title>
-  <!-- Link to your CSS -->
-  <link rel="stylesheet" href="styles.css" />
-  <!-- Typed.js from CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <title>Victoria Manjarrez</title>
+  <meta name="description" content="Victoria Manjarrez, Mechatronics engineer and MS student at Rice University " />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Fraunces:opsz,wght@9..144,600..800&family=Space+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="home.css" />
 </head>
 <body>
-  <!-- WHITE TOP NAV BAR -->
-  <header class="site-header">
-    <div class="nav-container">
-      <div class="brand">
-        <!-- Profile image remains first -->
-        <!--img src="images/Victoria.jpg" alt="Victoria Manjarrez" class="profile-pic">
-        <!-- Your name will now appear below the image -->
-        <a href="index.html">Victoria Manjarrez</a>
-      </div>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="CV.html">CV</a></li>
-          <li><a href="CV.html">About me</a></li>
-        </ul>
-      </nav>
-    </div>
+
+  <header class="top">
+    <a class="top-home" href="index.html">victoriamanjarrez.github.io</a>
+    <nav class="top-nav" aria-label="Main">
+      <a href="#research">research</a>
+      <a href="#publications">publications</a>
+      <a href="CV.html">cv</a>
+      <a href="#about">contact</a>
+    </nav>
   </header>
-  
 
-  
-<!-- HERO SECTION WITH VIDEO BACKGROUND, OVERLAY, IMAGE, AND TEXT -->
-<section class="hero-section">
-  <video class="hero-video" autoplay muted loop playsinline>
-    <source src="images/VIDEO2.mp4" type="video/mp4">
-    Your browser does not support the HTML5 video.
-  </video>
-  <!-- Semi-transparent overlay on top of the video -->
-  <div class="hero-overlay"></div>
-  <!-- Container for foreground content -->
-  <div class="hero-container">
-    <!-- Circular Picture: now on top -->
-    <div class="hero-image">
-      <img src="images/Victoria.jpg" alt="Victoria Manjarrez">
-    </div>
-    <!-- Introductory Text: now below the image -->
-    <div class="hero-text">
-      <h1>Hi, I'm Victoria Manjarrez </h1>
-      <h2>I'm a Mechatronics Engineer</h2>
-      <a href="#about" class="hero-button">Learn More About Me</a>
-    </div>
-  </div>
-</section>
+  <main>
+    <section class="hero" aria-label="Intro">
+      <!-- The word stands here. Visitors can knock letters over and the robot dog puts them back. Change data-word to change the letters. -->
+      <canvas id="hero-canvas" data-word="VICTORIA" data-color="#24477a" data-letter-color="#d3d6da" aria-hidden="true"></canvas>
+      <p class="hero-fallback" aria-hidden="true">VICTORIA</p>
+      <p class="hero-hint">click or swipe the letters to knock them over</p>
+
+    </section>
 
 
-  <!-- ABOUT ME SECTION WITH PHOTO NEXT TO TEXT -->
-  <!-- (Additional content goes here) -->
+    <section class="intro" id="about">
+      <div class="banner">
+        <video class="banner-video" autoplay muted loop playsinline preload="metadata">
+          <source src="images/VIDEO2.mp4" type="video/mp4" />
+        </video>
+        <div class="banner-shade"></div>
+        <div class="banner-text">
+          <h1>Victoria Manjarrez</h1>
+          <p class="tagline"> I like robots and space • MS student at Rice Univeristy</p>
+        </div>
+      </div>
 
-  <!-- BLACK FOOTER -->
-  <footer class="site-footer">
-    <p>&copy; 2023 Victoria Manjarrez. All rights reserved.</p>
-  </footer>
+      <div class="photo-ring">
+        <svg class="ring-text" viewBox="0 0 200 200" aria-hidden="true">
+          <defs><path id="ringPath" d="M100,100 m-88,0 a88,88 0 1,1 176,0 a88,88 0 1,1 -176,0" /></defs>
+        <!--  <text><textPath href="#ringPath" textLength="550" lengthAdjust="spacing">VICTORIA MANJARREZ • VICTORIA MANJARREZ • VICTORIA MANJARREZ •&#160;</textPath></text> -->
+        </svg>
+        <img src="images/Victoria.jpg" alt="" />
+      </div>
 
-  <!-- TYPED.JS INITIALIZATION -->
+      <div class="card-sheet">
+        <div class="about-body">
+        <h2>Hi!</h2>
+        <p class="lead">I'm Victoria, a mechatronics engineer doing my master's in Mechanical Engineering at Rice University in Houston.</p>
+
+        <dl class="now">
+          <div><dt>Now</dt><dd>MS Mechanical Engineering @ Rice, Avilas Research Group</dd></div>
+          <div><dt>Previously</dt><dd>Mechatronics Engineering @ Tec de Monterrey</dd></div>
+        </dl>
+
+        <p>Currently I'm working on:</p>
+        <ul class="highlights">
+          <li><span class="emo"></span> Qudrupeds control and locomotion for lunar craters </li>
+          <!-- <li><span class="emo">🛰️</span>Designed SPES, a 3U CubeSat proposal for the Access to Space for All contest run by Airbus and the UN Office for Outer Space Affairs.</li> 
+          <li><span class="emo">🫀</span>Built a low cost pressure regulator that recreates physiological and pathological pressure waveforms for organ on a chip systems.</li>
+          <li><span class="emo">📄</span>Co-authored 5 papers in journals like Advanced Materials and Matter.</li>
+          <li><span class="emo">🤖</span>Working on free flying modular robots on an air bearing testbed for my thesis.</li>
+          <li><span class="emo">🌊</span>Did the hydrodynamic and structural design of an autonomous submarine for RoboSub.</li>
+          <li><span class="emo">🎛️</span>TA for controls courses at Rice, running labs and grading.</li> -->
+        </ul>
+
+        <!-- Add your real links here: email, LinkedIn, GitHub, Google Scholar -->
+        <p class="links">
+          <a href="CV.html">CV</a>
+          <a href="#publications">Publications</a>
+          <!-- <a href="mailto:you@rice.edu">you@rice.edu</a> -->
+          <!-- <a href="https://linkedin.com/in/your-handle">LinkedIn</a> -->
+          <!-- <a href="https://github.com/your-handle">GitHub</a> -->
+        </p>
+      </div>
+      </div>
+    </section>
+
+    <section class="block" id="research">
+      <h2>Research</h2>
+      <p class="block-intro">Projects across aerospace, biomedical devices and robotics.</p>
+      <div class="grid">
+        <a class="card" href="research1.html">
+          <img src="images/SPES1.png" alt="" loading="lazy" />
+          <h3>SPES 3U CubeSat</h3>
+          <p>CubeSat proposal for the Access to Space for All contest by Airbus and UNOOSA.</p>
+        </a>
+        <a class="card" href="research2.html">
+          <img src="images/PR1.png" alt="" loading="lazy" />
+          <h3>Pressure regulator for organ on a chip</h3>
+          <p>Low cost device that reproduces physiological and pathological pressure waveforms.</p>
+        </a>
+        <a class="card" href="research3.html">
+          <img src="images/AS3.png" alt="" loading="lazy" />
+          <h3>Autonomous submarine</h3>
+          <p>Hydrodynamic and structural design of an AUV for RoboSub.</p>
+        </a>
+        <a class="card" href="research4.html">
+          <img src="images/HC1.png" alt="" loading="lazy" />
+          <h3>Harvard ground station</h3>
+          <p>Antenna mount designed and analyzed for a 2U CubeSat mission.</p>
+        </a>
+        <a class="card" href="research5.html">
+          <img src="images/CP1.png" alt="" loading="lazy" />
+          <h3>Cryogenic 3D printing</h3>
+          <p>Motion and path planning for a cryogenic 3D printing system.</p>
+        </a>
+        <a class="card" href="research6.html">
+          <img src="images/visualization_config_simple_n400.png" alt="" loading="lazy" />
+          <h3>Planning under uncertainty</h3>
+          <p>Stochastic Motion Roadmap to steer a 2D needle under uncertainty.</p>
+        </a>
+        <a class="card" href="research7.html">
+          <img src="images/hydrogel_img1.png" alt="" loading="lazy" />
+          <h3>Hydrogel microstructure</h3>
+          <p>Measuring pores in hydrogels with computer vision and machine learning.</p>
+        </a>
+        <div class="card">
+          <img src="images/RC1.jpg" alt="" loading="lazy" />
+          <h3>Rubik's cube solver</h3>
+          <p>A machine that solves a Rubik's cube.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="publications">
+      <h2>Publications</h2>
+      <ol class="pubs">
+        <li>
+          <a href="https://doi.org/10.1002/adma.202304846" target="_blank" rel="noopener">Rapid Volumetric Bioprinting of Decellularized Extracellular Matrix Bioinks</a>
+          <span class="journal">Advanced Materials</span>
+        </li>
+        <li>
+          <a href="https://doi.org/10.1016/j.matt.2024.05.033" target="_blank" rel="noopener">Engineering Electronic Ink Composites for Bioelectronics with Tunable Bidirectional Mechanics</a>
+          <span class="journal">Matter</span>
+        </li>
+        <li>
+          <a href="https://link.springer.com/article/10.1007/s40883-025-00448-3" target="_blank" rel="noopener">Pressure Regulator Platform for Applying Biomechanical Stimuli on Organ on a Chip Systems with Physiological and Pathological Relevancy</a>
+          <span class="journal">Advanced Healthcare Materials</span>
+        </li>
+        <li>
+          <a href="https://doi.org/10.1063/5.0187558" target="_blank" rel="noopener">Design considerations for digital light processing bioprinters</a>
+          <span class="journal">Applied Physics</span>
+        </li>
+        <li>
+          <a href="https://doi.org/10.1016/j.lssr.2022.09.002" target="_blank" rel="noopener">Small tissue chips with big opportunities for space medicine</a>
+          <span class="journal">Life Sciences in Space Research</span>
+        </li>
+      </ol>
+      <p class="more"><a href="publications.html">Full author lists on the publications page</a></p>
+    </section>
+  </main>
+
+  <footer class="foot">© 2026 Victoria Manjarrez</footer>
+
+  <script src="js/hero.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      new Typed(".typed-text", {
-        strings: [
-          "Mechatronics Engineer",
-          "Researcher"
-        ],
-        typeSpeed: 60,
-        backSpeed: 40,
-        backDelay: 1500,
-        loop: true
-      });
-    });
+    // the video banner slides over the robot as you scroll, and the name ring turns with the scroll
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var els = document.querySelectorAll('.reveal');
+      if (reduce || !('IntersectionObserver' in window)) {
+        els.forEach(function (el) { el.classList.add('in'); });
+      } else {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+        }, { threshold: 0.15 });
+        els.forEach(function (el) { io.observe(el); });
+      }
+      var hero = document.querySelector('.hero');
+      var canvas = document.getElementById('hero-canvas');
+      var intro = document.getElementById('about');
+      function fadeHero() {
+        var h = hero.offsetHeight;
+        var top = intro.getBoundingClientRect().top;
+        // fully visible until the banner reaches the middle of the scene, gone once it covers it
+        var k = Math.max(0, Math.min(1, (top - h * 0.05) / (h * 0.45)));
+        hero.style.opacity = k;
+        if (!reduce) hero.style.transform = 'scale(' + (0.94 + 0.06 * k) + ')';
+        if (canvas) canvas.dataset.paused = k === 0 ? '1' : '0';
+      }
+      window.addEventListener('scroll', function () { requestAnimationFrame(fadeHero); }, { passive: true });
+      window.addEventListener('resize', fadeHero);
+      fadeHero();
+
+      var ring = document.querySelector('.ring-text');
+      if (ring && !reduce) {
+        var ticking = false;
+        window.addEventListener('scroll', function () {
+          if (ticking) return; ticking = true;
+          requestAnimationFrame(function () {
+            ring.style.transform = 'rotate(' + (window.scrollY * 0.15) + 'deg)';
+            ticking = false;
+          });
+        }, { passive: true });
+      }
+    })();
   </script>
 </body>
 </html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Victoria Manjarrez - Home</title>
+  <!-- Link to your CSS -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Typed.js from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+  <!-- WHITE TOP NAV BAR -->
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="brand">
+        <!-- Profile image remains first -->
+        <!--img src="images/Victoria.jpg" alt="Victoria Manjarrez" class="profile-pic">
+        <!-- Your name will now appear below the image -->
+        <a href="index.html">Victoria Manjarrez</a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="CV.html">CV</a></li>
+          <li><a href="CV.html">About me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+
+  
+<!-- HERO SECTION WITH VIDEO BACKGROUND, OVERLAY, IMAGE, AND TEXT -->
+<section class="hero-section">
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="images/VIDEO2.mp4" type="video/mp4">
+    Your browser does not support the HTML5 video.
+  </video>
+  <!-- Semi-transparent overlay on top of the video -->
+  <div class="hero-overlay"></div>
+  <!-- Container for foreground content -->
+  <div class="hero-container">
+    <!-- Circular Picture: now on top -->
+    <div class="hero-image">
+      <img src="images/Victoria.jpg" alt="Victoria Manjarrez">
+    </div>
+    <!-- Introductory Text: now below the image -->
+    <div class="hero-text">
+      <h1>Hi, I'm Victoria Manjarrez </h1>
+      <h2>I'm a Mechatronics Engineer</h2>
+      <a href="#about" class="hero-button">Learn More About Me</a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ABOUT ME SECTION WITH PHOTO NEXT TO TEXT -->
+  <!-- (Additional content goes here) -->
+
+  <!-- BLACK FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; 2023 Victoria Manjarrez. All rights reserved.</p>
+  </footer>
+
+  <!-- TYPED.JS INITIALIZATION -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      new Typed(".typed-text", {
+        strings: [
+          "Mechatronics Engineer",
+          "Researcher"
+        ],
+        typeSpeed: 60,
+        backSpeed: 40,
+        backDelay: 1500,
+        loop: true
+      });
+    });
+  </script>
+</body>
+</html>
